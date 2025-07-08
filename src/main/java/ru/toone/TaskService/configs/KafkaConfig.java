@@ -1,4 +1,4 @@
-package ru.toone.demo.config;
+package ru.toone.TaskService.configs;
 
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;

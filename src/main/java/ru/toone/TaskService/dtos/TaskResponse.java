@@ -1,43 +1,26 @@
-package ru.toone.taskService.models;
+package ru.toone.TaskService.dtos;
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import io.swagger.v3.oas.annotations.media.Schema;
+import lombok.Data;
 
 import java.time.ZonedDateTime;
 
-@Table(name="task")
-@Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
-@EqualsAndHashCode
-public class Task {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+@Data
+public class TaskResponse {
+    @Schema(example = "1")
     private Long id;
-
-    @Column(name = "title", nullable = false)
+    @Schema(example = "АБВГД")
     private String title;
-
-    @Column(name = "description")
+    @Schema(example = "дэээдээдэдафвав")
     private String description;
-
-    @Column(name = "status", nullable = false)
+    @Schema(example = "IN_PROGRESS")
     private String status;
-
-    @Column(name = "created_at", nullable = false)
+    @Schema(example = "2022-07-08T19:58:36.915Z")
     private ZonedDateTime createdAt;
-
-    @Column(name = "tag", nullable = false)
+    @Schema(example = "important")
     private String tag;
-
-    @Column(name = "user_id", nullable = false)
+    @Schema(example = "21")
     private Long userId;
-
 
     public Long getId() {
         return id;

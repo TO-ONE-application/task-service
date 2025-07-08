@@ -1,4 +1,4 @@
-package ru.toone.demo;
+package ru.toone.TaskService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
