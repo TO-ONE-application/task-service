@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: task-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: heyNulleviyDataBasePass
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+  liquibase:
+    analytics-enabled: true
+    change-log: classpath:/db/changelog/database-changelog.yaml
+
+kafka:
+  bootstrap-servers: localhost:9092
+  topic:
+
+server:
+  port: 7331
